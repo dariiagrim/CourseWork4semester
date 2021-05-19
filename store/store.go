@@ -1,4 +1,4 @@
-package main
+package store
 
 import (
 	"encoding/csv"
@@ -58,18 +58,16 @@ func (s *Store) addArtists(artistsSlice [][]interface{}, trackArtistId map[strin
 	return nil
 }
 
-func main() {
+func MainStore() {
 	store := &Store{}
 	_ = store.Open()
 	defer store.Close()
-	tracksSlice, artists := getTracksSlice()
-	artistsSlice := getArtistsSlice(artists)
-	fmt.Println(len(artistsSlice))
-	trackArtistId := make(map[string]int)
-	store.addArtists(artistsSlice, trackArtistId)
-	store.addTracks(tracksSlice, trackArtistId)
-
-
+	//tracksSlice, artists := getTracksSlice()
+	//artistsSlice := getArtistsSlice(artists)
+	//fmt.Println(len(artistsSlice))
+	//trackArtistId := make(map[string]int)
+	//store.addArtists(artistsSlice, trackArtistId)
+	//store.addTracks(tracksSlice, trackArtistId)
 }
 
 func getTracksSlice() ([][]interface{}, map[string][]string) {
