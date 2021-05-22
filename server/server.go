@@ -1,8 +1,10 @@
 package server
 
 import (
+	"fmt"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"music_recommender/models"
 	"music_recommender/store"
 	"net/http"
 )
@@ -37,6 +39,10 @@ func (s *Server) openStore() error {
 
 func (s *Server) configRouter()  {
 	s.router.GET("/tracks", s.handleAllTracksSelect())
+	s.router.POST("/create", s.handleCreateUser())
+	s.router.POST("/rate", s.handleRateTrack())
+	s.router.GET("/id", s.handleTrackByIdSelect())
+	s.router.GET("/username", s.handleUserExistence())
 }
 
 func (s *Server) handleAllTracksSelect() gin.HandlerFunc {
@@ -44,6 +50,75 @@ func (s *Server) handleAllTracksSelect() gin.HandlerFunc {
 		tracks := s.store.SelectAllTracks()
 		c.JSON(http.StatusOK, gin.H{
 			"tracks": tracks,
+		})
+	}
+}
+
+func (s *Server) handleCreateUser() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		var user models.User
+		if err := c.ShouldBindJSON(&user); err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"message": err.Error(),
+			})
+			return
+		}
+
+		count, err := s.store.CreateUser(&user)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"message": err.Error(),
+			})
+			return
+		}
+
+		c.JSON(http.StatusCreated, gin.H {
+			"id": count,
+		})
+	}
+}
+
+func (s *Server) handleTrackByIdSelect() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		id := c.Query("id")
+		track := s.store.SelectTrackById(id)
+		artist := s.store.SelectArtistById(track.ArtistId)
+		c.JSON(http.StatusOK, gin.H{
+			"track": track,
+			"artist": artist,
+		})
+	}
+}
+
+func (s *Server) handleUserExistence() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		username := c.Query("username")
+		user := s.store.SelectUserByUsername(username)
+		c.JSON(http.StatusOK, gin.H{
+			"user": user,
+		})
+	}
+}
+
+func (s *Server) handleRateTrack() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		var rating models.Rating
+		if err := c.ShouldBindJSON(&rating); err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"message": err.Error(),
+			})
+			return
+		}
+		fmt.Println(rating.UserId)
+		if err := s.store.CreateRating(&rating); err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"message": err.Error(),
+			})
+			return
+		}
+
+		c.JSON(http.StatusCreated, gin.H{
+			"message": "ok",
 		})
 	}
 }

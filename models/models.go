@@ -11,3 +11,25 @@ type Track struct {
 	Danceability float64 `json:"danceability" db:"danceability"`
 	Energy float64 `json:"energy" db:"energy"`
 }
+
+type User struct {
+	Id int `json:"id" db:"id"`
+	Username string `json:"username" db:"username"`
+	Age int `json:"age" db:"age"`
+}
+
+type Artist struct {
+	Id int `json:"id" db:"id"`
+	Followers float64 `json:"followers" db:"followers"`
+	Genres string `json:"genres" db:"genres"`
+	Name string `json:"name" db:"name"`
+	Popularity float64 `json:"popularity" db:"popularity"`
+}
+
+
+type Rating struct {
+	Id int `json:"id" db:"id"`
+	UserId int `json:"user_id" db:"user_id"`
+	TrackId int `json:"track_id" db:"track_id"`
+	Rating int `json:"rating" db:"rating"`
+}

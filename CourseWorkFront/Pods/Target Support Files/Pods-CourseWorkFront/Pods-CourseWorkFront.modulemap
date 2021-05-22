@@ -1,0 +1,6 @@
+framework module Pods_CourseWorkFront {
+  umbrella header "Pods-CourseWorkFront-umbrella.h"
+
+  export *
+  module * { export * }
+}
