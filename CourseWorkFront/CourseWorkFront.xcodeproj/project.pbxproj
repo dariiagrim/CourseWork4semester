@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6A5E70D2C2EB8374324162FC /* Pods_CourseWorkFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28103B1546B2EE2B7349E647 /* Pods_CourseWorkFront.framework */; };
+		C38F41CC26597B9300BE0C4C /* RateTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F41CB26597B9300BE0C4C /* RateTracksViewController.swift */; };
+		C39B5E53265A597900BBF118 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5E52265A597900BBF118 /* Artist.swift */; };
+		C39B5E5D265A60BB00BBF118 /* ArtistAndTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5E5C265A60BB00BBF118 /* ArtistAndTrack.swift */; };
 		C3C7A43226591A29003BF8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A43126591A29003BF8A5 /* AppDelegate.swift */; };
 		C3C7A43426591A29003BF8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A43326591A29003BF8A5 /* SceneDelegate.swift */; };
 		C3C7A43626591A29003BF8A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A43526591A29003BF8A5 /* ViewController.swift */; };
@@ -17,12 +20,14 @@
 		C3C7A44C2659272D003BF8A5 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A44B2659272D003BF8A5 /* AddUserViewController.swift */; };
 		C3C7A453265931FA003BF8A5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A452265931FA003BF8A5 /* Track.swift */; };
 		C3C7A45826593359003BF8A5 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A45726593359003BF8A5 /* Tracks.swift */; };
-		C3C7A45C2659614A003BF8A5 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A45B2659614A003BF8A5 /* Responses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28103B1546B2EE2B7349E647 /* Pods_CourseWorkFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CourseWorkFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		984F4EE5EE535EB41A64657C /* Pods-CourseWorkFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseWorkFront.release.xcconfig"; path = "Target Support Files/Pods-CourseWorkFront/Pods-CourseWorkFront.release.xcconfig"; sourceTree = "<group>"; };
+		C38F41CB26597B9300BE0C4C /* RateTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTracksViewController.swift; sourceTree = "<group>"; };
+		C39B5E52265A597900BBF118 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		C39B5E5C265A60BB00BBF118 /* ArtistAndTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAndTrack.swift; sourceTree = "<group>"; };
 		C3C7A42E26591A29003BF8A5 /* CourseWorkFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseWorkFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C7A43126591A29003BF8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C7A43326591A29003BF8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +39,6 @@
 		C3C7A44B2659272D003BF8A5 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		C3C7A452265931FA003BF8A5 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		C3C7A45726593359003BF8A5 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
-		C3C7A45B2659614A003BF8A5 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 		F390249997F3F5FBA50E49E4 /* Pods-CourseWorkFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseWorkFront.debug.xcconfig"; path = "Target Support Files/Pods-CourseWorkFront/Pods-CourseWorkFront.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +109,8 @@
 			children = (
 				C3C7A452265931FA003BF8A5 /* Track.swift */,
 				C3C7A45726593359003BF8A5 /* Tracks.swift */,
-				C3C7A45B2659614A003BF8A5 /* Responses.swift */,
+				C39B5E52265A597900BBF118 /* Artist.swift */,
+				C39B5E5C265A60BB00BBF118 /* ArtistAndTrack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				C3C7A43526591A29003BF8A5 /* ViewController.swift */,
 				C3C7A44B2659272D003BF8A5 /* AddUserViewController.swift */,
+				C38F41CB26597B9300BE0C4C /* RateTracksViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,9 +250,11 @@
 				C3C7A43626591A29003BF8A5 /* ViewController.swift in Sources */,
 				C3C7A453265931FA003BF8A5 /* Track.swift in Sources */,
 				C3C7A44C2659272D003BF8A5 /* AddUserViewController.swift in Sources */,
+				C39B5E53265A597900BBF118 /* Artist.swift in Sources */,
 				C3C7A45826593359003BF8A5 /* Tracks.swift in Sources */,
+				C39B5E5D265A60BB00BBF118 /* ArtistAndTrack.swift in Sources */,
+				C38F41CC26597B9300BE0C4C /* RateTracksViewController.swift in Sources */,
 				C3C7A43226591A29003BF8A5 /* AppDelegate.swift in Sources */,
-				C3C7A45C2659614A003BF8A5 /* Responses.swift in Sources */,
 				C3C7A43426591A29003BF8A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
