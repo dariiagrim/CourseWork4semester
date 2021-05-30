@@ -11,6 +11,8 @@
 		C38F41CC26597B9300BE0C4C /* RateTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F41CB26597B9300BE0C4C /* RateTracksViewController.swift */; };
 		C39B5E53265A597900BBF118 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5E52265A597900BBF118 /* Artist.swift */; };
 		C39B5E5D265A60BB00BBF118 /* ArtistAndTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5E5C265A60BB00BBF118 /* ArtistAndTrack.swift */; };
+		C3A77E20265A747B001725D4 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A77E1F265A747B001725D4 /* Recommendation.swift */; };
+		C3A77E23265A74FF001725D4 /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A77E22265A74FF001725D4 /* RecommendationsViewController.swift */; };
 		C3C7A43226591A29003BF8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A43126591A29003BF8A5 /* AppDelegate.swift */; };
 		C3C7A43426591A29003BF8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A43326591A29003BF8A5 /* SceneDelegate.swift */; };
 		C3C7A43626591A29003BF8A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A43526591A29003BF8A5 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 		C3C7A44C2659272D003BF8A5 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A44B2659272D003BF8A5 /* AddUserViewController.swift */; };
 		C3C7A453265931FA003BF8A5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A452265931FA003BF8A5 /* Track.swift */; };
 		C3C7A45826593359003BF8A5 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C7A45726593359003BF8A5 /* Tracks.swift */; };
+		C3FA36A62662264300E8FA09 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA36A42662264300E8FA09 /* RecommendationCell.swift */; };
+		C3FA36A72662264300E8FA09 /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FA36A52662264300E8FA09 /* RecommendationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,8 @@
 		C38F41CB26597B9300BE0C4C /* RateTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTracksViewController.swift; sourceTree = "<group>"; };
 		C39B5E52265A597900BBF118 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		C39B5E5C265A60BB00BBF118 /* ArtistAndTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAndTrack.swift; sourceTree = "<group>"; };
+		C3A77E1F265A747B001725D4 /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
+		C3A77E22265A74FF001725D4 /* RecommendationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
 		C3C7A42E26591A29003BF8A5 /* CourseWorkFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseWorkFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C7A43126591A29003BF8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C7A43326591A29003BF8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,8 @@
 		C3C7A44B2659272D003BF8A5 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		C3C7A452265931FA003BF8A5 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		C3C7A45726593359003BF8A5 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
+		C3FA36A42662264300E8FA09 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
+		C3FA36A52662264300E8FA09 /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
 		F390249997F3F5FBA50E49E4 /* Pods-CourseWorkFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseWorkFront.debug.xcconfig"; path = "Target Support Files/Pods-CourseWorkFront/Pods-CourseWorkFront.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +119,7 @@
 				C3C7A45726593359003BF8A5 /* Tracks.swift */,
 				C39B5E52265A597900BBF118 /* Artist.swift */,
 				C39B5E5C265A60BB00BBF118 /* ArtistAndTrack.swift */,
+				C3A77E1F265A747B001725D4 /* Recommendation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				C3C7A43726591A29003BF8A5 /* Main.storyboard */,
+				C3FA36A42662264300E8FA09 /* RecommendationCell.swift */,
+				C3FA36A52662264300E8FA09 /* RecommendationCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 				C3C7A43526591A29003BF8A5 /* ViewController.swift */,
 				C3C7A44B2659272D003BF8A5 /* AddUserViewController.swift */,
 				C38F41CB26597B9300BE0C4C /* RateTracksViewController.swift */,
+				C3A77E22265A74FF001725D4 /* RecommendationsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FA36A72662264300E8FA09 /* RecommendationCell.xib in Resources */,
 				C3C7A43E26591A2A003BF8A5 /* LaunchScreen.storyboard in Resources */,
 				C3C7A43B26591A2A003BF8A5 /* Assets.xcassets in Resources */,
 				C3C7A43926591A29003BF8A5 /* Main.storyboard in Resources */,
@@ -247,8 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A77E20265A747B001725D4 /* Recommendation.swift in Sources */,
+				C3A77E23265A74FF001725D4 /* RecommendationsViewController.swift in Sources */,
 				C3C7A43626591A29003BF8A5 /* ViewController.swift in Sources */,
 				C3C7A453265931FA003BF8A5 /* Track.swift in Sources */,
+				C3FA36A62662264300E8FA09 /* RecommendationCell.swift in Sources */,
 				C3C7A44C2659272D003BF8A5 /* AddUserViewController.swift in Sources */,
 				C39B5E53265A597900BBF118 /* Artist.swift in Sources */,
 				C3C7A45826593359003BF8A5 /* Tracks.swift in Sources */,

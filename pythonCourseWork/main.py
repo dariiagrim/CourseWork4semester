@@ -52,6 +52,7 @@ sim_options = {
 algo = KNNWithMeans(sim_options=sim_options)
 trainingSet = data.build_full_trainset()
 algo.fit(trainingSet)
-prediction = algo.predict(2, 3)
-print(prediction.est)
+prediction = algo.predict(137, 10)
+prediction_est = prediction.est
+print(prediction_est)
 connection.close()

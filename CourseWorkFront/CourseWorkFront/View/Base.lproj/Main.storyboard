@@ -51,6 +51,9 @@
                                         <state key="normal" title="Get recommendations">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="W0K-FN-Mzs" kind="show" identifier="goToRecommendations" id="slZ-NK-IiZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -312,11 +315,67 @@
             </objects>
             <point key="canvasLocation" x="1829.5999999999999" y="73.313343328335833"/>
         </scene>
+        <!--Recommendations View Controller-->
+        <scene sceneID="SNF-4J-Xfj">
+            <objects>
+                <viewController id="W0K-FN-Mzs" customClass="RecommendationsViewController" customModule="CourseWorkFront" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mRd-9J-b7v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter you id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8EP-tt-KXX">
+                                <rect key="frame" x="100" y="94" width="214" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="47w-Ww-9Ks"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZU-o0-77t">
+                                <rect key="frame" x="50" y="184" width="314" height="477"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85i-mK-wYr">
+                                <rect key="frame" x="100" y="681" width="214" height="45"/>
+                                <color key="backgroundColor" red="0.79215686269999996" green="0.96862745100000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Get recommendations"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="emo-aa-1W4"/>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.87450980389999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8EP-tt-KXX" firstAttribute="leading" secondItem="emo-aa-1W4" secondAttribute="leading" constant="100" id="3TV-uz-GCw"/>
+                            <constraint firstItem="emo-aa-1W4" firstAttribute="trailing" secondItem="8EP-tt-KXX" secondAttribute="trailing" constant="100" id="904-Qd-PFd"/>
+                            <constraint firstItem="ZZU-o0-77t" firstAttribute="leading" secondItem="emo-aa-1W4" secondAttribute="leading" constant="50" id="9lc-rK-rxa"/>
+                            <constraint firstItem="emo-aa-1W4" firstAttribute="trailing" secondItem="85i-mK-wYr" secondAttribute="trailing" constant="100" id="Ckh-35-iuw"/>
+                            <constraint firstItem="85i-mK-wYr" firstAttribute="leading" secondItem="emo-aa-1W4" secondAttribute="leading" constant="100" id="Hi3-7S-0zE"/>
+                            <constraint firstItem="emo-aa-1W4" firstAttribute="trailing" secondItem="ZZU-o0-77t" secondAttribute="trailing" constant="50" id="M7x-aw-QsN"/>
+                            <constraint firstItem="8EP-tt-KXX" firstAttribute="top" secondItem="emo-aa-1W4" secondAttribute="top" constant="50" id="OUF-dh-gC5"/>
+                            <constraint firstItem="emo-aa-1W4" firstAttribute="bottom" secondItem="ZZU-o0-77t" secondAttribute="bottom" constant="75" id="PNV-XG-Kdn"/>
+                            <constraint firstItem="85i-mK-wYr" firstAttribute="top" secondItem="ZZU-o0-77t" secondAttribute="bottom" constant="20" id="Q2P-wS-JR8"/>
+                            <constraint firstItem="ZZU-o0-77t" firstAttribute="top" secondItem="8EP-tt-KXX" secondAttribute="bottom" constant="50" id="UQ3-Fy-LKv"/>
+                            <constraint firstItem="emo-aa-1W4" firstAttribute="bottom" secondItem="85i-mK-wYr" secondAttribute="bottom" constant="10" id="o3K-fb-9zE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2yZ-le-cDN"/>
+                    <connections>
+                        <outlet property="getRecommendationsButton" destination="85i-mK-wYr" id="aUY-q2-JEr"/>
+                        <outlet property="idTextField" destination="8EP-tt-KXX" id="om5-7y-Jt2"/>
+                        <outlet property="recommendationsTableView" destination="ZZU-o0-77t" id="gig-uV-FO4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2L-Y9-l80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="824.18478260869574"/>
+        </scene>
     </scenes>
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

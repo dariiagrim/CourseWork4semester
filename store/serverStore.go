@@ -20,11 +20,11 @@ func (s *Store) CreateUser(user *models.User) (int, error) {
 		return 0, err
 	}
 	var count int
-	row := s.db.QueryRow("SELECT COUNT(*) FROM users")
-	err = row.Scan(&count)
+	err = s.db.Get(&count, "SELECT id FROM users order by id desc limit 1;")
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println(count)
 	return count, nil
 }
 

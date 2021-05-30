@@ -1,13 +1,15 @@
 from flask import Flask
+from main import algo
 
 app = Flask(__name__)
 
 
-@app.route("/&lt;username&gt;", methods=['GET'])
-def index(username):
-    return "Hello, %s!" % username
+@app.route("/user/<user_id>")
+def hello_world(user_id):
+    return {
+        "user_id": user_id,
+        "words": "hello"
+    }
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=4567)
-
+app.run()
