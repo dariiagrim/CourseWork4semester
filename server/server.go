@@ -7,6 +7,7 @@ import (
 	"music_recommender/models"
 	"music_recommender/store"
 	"net/http"
+	"strconv"
 )
 
 type Server struct {
@@ -43,6 +44,7 @@ func (s *Server) configRouter()  {
 	s.router.POST("/rate", s.handleRateTrack())
 	s.router.GET("/id", s.handleTrackByIdSelect())
 	s.router.GET("/username", s.handleUserExistence())
+	s.router.GET("/rated", s.handleRatedByUserTracks())
 }
 
 func (s *Server) handleAllTracksSelect() gin.HandlerFunc {
@@ -119,6 +121,17 @@ func (s *Server) handleRateTrack() gin.HandlerFunc {
 
 		c.JSON(http.StatusCreated, gin.H{
 			"message": "ok",
+		})
+	}
+}
+
+func (s *Server) handleRatedByUserTracks() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		userId := c.Query("user_id")
+		id, _ := strconv.Atoi(userId)
+		tracks := s.store.SelectRatedByUserTracks(id)
+		c.JSON(http.StatusOK, gin.H{
+			"tracks": tracks,
 		})
 	}
 }

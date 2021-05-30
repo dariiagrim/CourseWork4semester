@@ -55,3 +55,9 @@ func (s *Store) CreateRating(rating *models.Rating) error {
 	}
 	return nil
 }
+
+func (s *Store) SelectRatedByUserTracks(userId int) []int {
+	tracks := make([]int, 0)
+	_ = s.db.Select(&tracks, "select track_id from ratings where user_id = $1", userId)
+	return tracks
+}
