@@ -1,5 +1,6 @@
 import random
 from main import algo
+from main2 import svd
 from operator import itemgetter
 
 
@@ -14,6 +15,5 @@ def get_recommendations(user_id, number):
         evaluation_list.append((track_id, algo.predict(user_id, track_id).est))
     evaluation_list_sorted = sorted(evaluation_list, key=itemgetter(1), reverse=True)
     return evaluation_list_sorted[:50]
-
 
 

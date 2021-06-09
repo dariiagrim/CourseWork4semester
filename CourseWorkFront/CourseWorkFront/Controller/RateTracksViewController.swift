@@ -84,7 +84,7 @@ class RateTracksViewController: UIViewController {
     }
     
     func requestTrack() {
-        let randomId = Int.random(in: 1...69000)
+        let randomId = Int.random(in: 1...30)
         AF.request("http://localhost:8080/id?id=\(randomId)")
             .validate()
             .responseDecodable(of: ArtistAndTrack.self) { (response) in

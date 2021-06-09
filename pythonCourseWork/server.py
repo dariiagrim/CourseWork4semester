@@ -1,5 +1,4 @@
 from flask import Flask
-from main import algo
 from recommendations import get_recommendations
 
 app = Flask(__name__)

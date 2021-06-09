@@ -4,6 +4,8 @@ import sys
 from surprise import Dataset
 from surprise import Reader
 from surprise import KNNWithMeans
+from surprise import Dataset
+from surprise import Reader
 
 param_dic = {
     "host": "localhost",
@@ -47,12 +49,12 @@ data = Dataset.load_from_df(df[["user_id", "track_id", "rating"]], reader)
 
 sim_options = {
     "name": "cosine",
-    "user_based": False
+    "user_based": True
 }
 algo = KNNWithMeans(sim_options=sim_options)
 trainingSet = data.build_full_trainset()
 algo.fit(trainingSet)
-prediction = algo.predict(137, 10)
+prediction = algo.predict(3, 2)
 prediction_est = prediction.est
 print(prediction_est)
 connection.close()

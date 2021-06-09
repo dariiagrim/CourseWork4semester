@@ -74,7 +74,7 @@ func (s *Server) handleCreateUser() gin.HandlerFunc {
 			return
 		}
 
-		c.JSON(http.StatusCreated, gin.H {
+ 		c.JSON(http.StatusCreated, gin.H {
 			"id": count,
 		})
 	}
